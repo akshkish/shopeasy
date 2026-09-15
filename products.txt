@@ -1,0 +1,23 @@
+$file = fopen(
+    "data/products.txt",
+    "a"
+);
+
+fwrite(
+    $file,
+    "Shoes,2999\n"
+);
+
+fclose($file); 
+$file = fopen(
+    "data/products.txt",
+    "r"
+);
+
+while (!feof($file)) {
+
+    echo fgets($file);
+
+}
+
+fclose($file);
